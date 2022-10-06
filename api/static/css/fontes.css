@@ -1,0 +1,23 @@
+h5, h6, body, .display-1, .display-2, .display-3{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+}
+
+b{
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    font-weight: 900;
+}
+
+p, .breadcrumb, table{
+    font-weight: 300;
+}
+.bold{
+    font-weight: bold;
+}
