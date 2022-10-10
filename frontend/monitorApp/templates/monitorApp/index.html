@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block 'content' %}
+
+<table class="table mt-4 bg-light">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">status</th>
+        <th scope="col">Projeto</th>
+        <th scope="col">Painel</th>
+        <th scope="col">Sub-projetos</th>
+        <th scope="col">Items</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for consulta  in consultar  %}
+      <tr>
+          {% if consulta.status %}
+          <th scope="row"><i class="fas fa-cog fa-pulse"></i></th>
+          {%else%}
+          <th scope="row"><i class="fas fa-ban"></i></th>
+          {% endif %}
+        <td>{{consulta.projeto}}</td>
+        <td>{{consulta.painel}}</td>
+        <td>{{consulta.sub_projeto}}</td>
+        {% if  consulta.reason %}
+
+        <td>{{consulta.reason}}</td>
+       
+        {% else %}
+
+        <td>{{consulta.items}}</td>
+
+        {% endif %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

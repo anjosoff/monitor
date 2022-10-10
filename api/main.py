@@ -26,6 +26,7 @@ def paineis():
     result=[]
     for linha in dados[1:]:
         try:
+            
             host = linha['host']         
             porta= linha['porta']
             banco= linha['database']
@@ -39,13 +40,13 @@ def paineis():
             resultado = consulta.consultar(host,banco,porta,usuario,senha,esquema,tabela)
             resultado= str(resultado)
             if resultado !='0':
-                result.append({'painel':painel,'projeto':projeto,'sub-projeto':subprojeto,'items':resultado,'status':True})
+                result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'items':resultado,'status':True})
             else:
                 result.append({'painel':painel,'items':resultado,'status':False})
         except Exception as e2:
             e2=str(e2)     
             print(e2)    
-            result.append({'painel':painel,'items':resultado,'status':False,'reason':e2})
+            result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'status':False,'reason':e2})
     return make_response(result)
 @app.route('/v1/paineis', methods=['GET'])
 def get_paineis():
@@ -56,25 +57,7 @@ def get_paineis():
     data=wks.get_all_records()
     return make_response( 
             jsonify(data)
-         )
-
-@app.route('/v1/paineis', methods=['POST'])
-def add_painel():
-    try:
-        painel = request.json
-        gc=pygsheets.authorize(service_file='./env/key.json')
-        df=pd.DataFrame(painel)
-        CODE = '149FnZjzn4lNqpvSX5PvxBa2Wk-f3SHDFDoZ_CCVgp6M'
-        sh=gc.open_by_key(CODE)  
-        wks = sh[0]
-        wks.set_dataframe(df,(5,1))
-        result= make_response(jsonify({'Status':200,'response':'Created!'}),200)
-    except:
-        result=make_response(jsonify({'Status':400,'error':'Action refused!'}),400)
-    return result
-   
-   
-   
+         ) 
    
 if __name__ == '__main__':
     app.run()

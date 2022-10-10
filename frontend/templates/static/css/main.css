@@ -1,0 +1,121 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background:#286ce6;
+}
+
+.img-crop{
+    max-height: 253.5px;
+    height: 253.5px;
+    object-fit: cover;
+}
+
+
+
+
+.logo{
+    padding-top: 20vh;
+}
+
+.titulo{
+    font-size: 10vmin;
+    font-weight: bolder;
+}
+
+.table-fluid{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.video-list{
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.bg-1 {
+    background-image: url("../img/padraoOpaco.svg");
+    /* background: white; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+    height: 80vh;
+    max-height: 600px;
+}
+
+.bg-2 {
+    background-image: url("../img/postit.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 80vh;
+    max-height: 600px;
+}
+
+.bg-3 {
+    background-image: url("../img/postit.svg");
+    /* background: #4790F7; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+    max-height: 600px;
+}
+
+.bg-4 {
+    background-image: url("../img/postit.svg");
+    /* background: #4790F7; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+    max-height: 600px;
+}
+
+.btnPequeno {
+    width: 100px;
+    text-align: center;
+}
+
+.altura{
+    height: 65vh;
+    min-height: 700px;
+}
+
+.equipe {
+    height: 100%;
+}
+
+.breadcrumb {
+    margin-bottom: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: #D8E8FF;
+    border-radius: 0px;
+}
+
+.cardProj {
+    height: 300px;
+
+}
+
+.btnProj {
+    width: 100%;
+    border-radius: 0;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+.noticia {
+    height: 100%;
+}
+
+.itemNoticia {
+    height: 100px;
+}

@@ -1,7 +1,5 @@
 import pygsheets
 
-
-
 def lendoPlanilha():
     gc=pygsheets.authorize(service_file='./env/key.json')
     CODE = '149FnZjzn4lNqpvSX5PvxBa2Wk-f3SHDFDoZ_CCVgp6M'
