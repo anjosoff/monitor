@@ -6,28 +6,35 @@
 <link href="https://fonts.googleapis.com/css?family=Barlow:300,700,900" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"crossorigin="anonymous">
 <link href="{{url_for('static',filename='css/bootstrap.min.css')}} " rel="stylesheet">
-    <title>API de Monitoramento de Painéis</title>
+<link href="{{url_for('static',filename='css/fontes.css')}} " rel="stylesheet">
+<link href="{{url_for('static',filename='css/cores.css')}} " rel="stylesheet">
+<link href="{{url_for('static',filename='css/main.css')}} " rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='img/favicon.png')}}">
+    <title>API  Painéis</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <a class="navbar-brand" href="http://127.0.0.1:5000/">API de Monitoramento de Painéis</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav mr-autot">
-            <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:8000/">Monitoramento</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://residencia.tre-rn.jus.br/" target='_blank'>Residência em TI</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.tre-rn.jus.br/" target='_blank'>TRE-RN</a>
-            </li>
-          </ul>
-      </nav>
+  <nav class="navbar navbar-expand-lg bg-light text-dark">
+    <a class="navbar-brand" href="http://127.0.0.1:5000/">
+      <img src="{{url_for('static', filename='img/tre.png')}}">
+      API Painéis
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-autot">
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/" target='_blank'>Monitoramento <i class="fas fa-external-link-alt fa-xs"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://residencia.tre-rn.jus.br/" target='_blank'>Residência em TI <i class="fas fa-external-link-alt fa-xs"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.tre-rn.jus.br/" target='_blank'>TRE-RN <i class="fas fa-external-link-alt fa-xs"></i></a>
+        </li>
+      </ul>
+  </nav>
       <div class='container'>
 
         <div class="content">
@@ -37,5 +44,23 @@
         </div>
 
       </div>
+      <footer class="container-fluid text-light text-center  mb-0 align-items-bottom">
+        <div class="container navbar-dark  mt-0 mb-0">
+            <div class="row">
+                <div class="col pt-2">
+                    <a href="https://www.tre-rn.jus.br/" target="_blank">
+                        <img src="https://www.tre-rn.jus.br/++theme++justica_eleitoral/imagens/logos/tre-rn-inverse.png" style="width: 115px;height: 45px;"title="Site oficial">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col pt-0">
+                    <a class="text-right" href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank" style="color: white;text-decoration: none;" title="Desenvolvido em Django">
+                        <p class="text-right">Powered by Flask</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

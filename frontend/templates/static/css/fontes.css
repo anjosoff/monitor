@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;400;500;600;700&display=swap');
 h5, h6, body, .display-1, .display-2, .display-3{
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
 

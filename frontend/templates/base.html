@@ -10,7 +10,9 @@
     <link href="{%static 'css/main.css'%}" rel="stylesheet">
     <link href="{%static 'css/fontes.css'%}" rel="stylesheet">
     <link href="{%static 'css/cores.css'%}" rel="stylesheet">
-    <title>Monitores</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'img/favicon.png'%}">
+
+    <title>Monitoramento</title>
 </head>
 <body>
     <div class='menu'>
@@ -27,7 +29,7 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
               <ul class="navbar-nav mr-autot">
                 <li class="nav-item">
-                  <a class="nav-link" href="http://127.0.0.1:5000/">API <i class="fas fa-external-link-alt fa-xs"></i></a>
+                  <a class="nav-link" href="http://127.0.0.1:5000/">API</i></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="https://residencia.tre-rn.jus.br/" target='_blank'>Residência em TI <i class="fas fa-external-link-alt fa-xs"></i></a>
@@ -46,6 +48,24 @@
         {% endblock 'content' %}
 
     </div>
+    <footer class="container-fluid text-light text-center  mb-0 align-items-bottom">
+      <div class="container navbar-dark  mt-0 mb-0">
+          <div class="row">
+              <div class="col pt-2">
+                  <a href="https://www.tre-rn.jus.br/" target="_blank">
+                      <img src="https://www.tre-rn.jus.br/++theme++justica_eleitoral/imagens/logos/tre-rn-inverse.png" style="width: 115px;height: 45px;"title="Site oficial">
+                  </a>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col pt-0">
+                  <a class="text-right" href="https://www.djangoproject.com/" target="_blank" style="color: white;text-decoration: none;" title="Desenvolvido em Django">
+                      <p class="text-right">Powered by Django</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </footer>
 </body>
 </html>
 
