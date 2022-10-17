@@ -1,70 +1,10 @@
 body{
-    background:#010A85;
-}
-
-.azulescuro{
-    background: #010A85;
-}
-.bg-azul{
-    background: dodgerblue;
+    background:#343a40;
 }
 
 footer{
-    background: #010A85;
+    background: #343a40;
 }
-.filtro{
-    filter: blur(6);
-}
-
-.transparente{
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-}
-
-.sem-borda{
-    border: 0px;
-}
-
-.btnPequeno{
-    background: dodgerblue;
-    border: none;
-    color: white;
-}
-
-.btnPequeno:hover {
-    background: #98C3FF;
-    color: white;
-}
-
-.btnProj{
-    background: lightgray;
-    color: black;
-    border: none;
-}
-
-.btnProj:hover{
-    background: #010A85;
-    border: none;
-    color: white;
-}
-.bg-roxo{
-    background: #5D66DE;
-}
-.info-complementar{
-    background: rgb(255, 255, 255);
-    border-radius: 20px 20px 0 0;
-    color: dodgerblue;
-}
-.info-complementar-bg{
-    background: dodgerblue;
-    color: white;
-}
-
-.riscos{
-    background: rgb(213, 213, 213);
-}
-
-.funcs{
-    background: dodgerblue;
-    color: white;
+.white-texto{
+    color:white ! important;
 }

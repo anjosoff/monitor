@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Barlow:300,700,900" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"crossorigin="anonymous">
-<link href="{{url_for('static',filename='css/bootstrap.min.css')}} " rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link href="{{url_for('static',filename='css/fontes.css')}} " rel="stylesheet">
 <link href="{{url_for('static',filename='css/cores.css')}} " rel="stylesheet">
-<link href="{{url_for('static',filename='css/main.css')}} " rel="stylesheet">
+
 <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='img/favicon.png')}}">
-    <title>API  Painéis</title>
+    <title>API  Painéis - Residência de TI</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-light text-dark">
-    <a class="navbar-brand" href="http://127.0.0.1:5000/">
-      <img src="{{url_for('static', filename='img/tre.png')}}">
+  <nav class="navbar navbar-expand-lg bg-dark text-light">
+    <a class="navbar-brand text-light " href="https://residencia.tre-rn.jus.br/">
+      <img style="width:30px;margin-left:10px; padding-right:2px;" src="{{url_for('static',filename='img/iconLogo.png')}}">
       API Painéis
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,28 +23,31 @@
     </button>
   
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul class="navbar-nav mr-autot">
+      <ul class="navbar-nav mr-auto ">
         <li class="nav-item">
-          <a class="nav-link" href="http://127.0.0.1:8000/" target='_blank'>Monitoramento <i class="fas fa-external-link-alt fa-xs"></i></a>
+          <a class="nav-link text-light" href="http://127.0.0.1:8000/" target='_blank'>Monitoramento</i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://residencia.tre-rn.jus.br/" target='_blank'>Residência em TI <i class="fas fa-external-link-alt fa-xs"></i></a>
+          <a class="nav-link text-light" href="https://residencia.tre-rn.jus.br/" target='_blank'>Residência em TI <i class="fas fa-external-link-alt fa-xs"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.tre-rn.jus.br/" target='_blank'>TRE-RN <i class="fas fa-external-link-alt fa-xs"></i></a>
+          <a class="nav-link text-light " href="https://www.tre-rn.jus.br/" target='_blank'>TRE-RN <i class="fas fa-external-link-alt fa-xs"></i></a>
         </li>
       </ul>
   </nav>
-      <div class='container'>
+      <div class='container '>
 
-        <div class="content">
-
-            
-
+        
+        
+        <div class="bg-light rounded text-dark pl-3 centered " style="margin-left:450px;width:450px;height: 350px; padding-top:55px; margin-top:150px">
+          <img style='padding-left:165px;' src="{{url_for('static',filename='img/iconLogo.png')}}">
+          <h1 class="d-flex justify-content-center pb-0 pt-0">API PAINÉIS</h1>    
+          <p style="padding-left:40px"> Para fazer consulta na API use o endpoint ↓ <br> <code><a href='http://127.0.0.1:5000/v1/consultar' target='_blank'>http://127.0.0.1:5000/v1/consultar</a></code></p>
+          <p style="padding-left:40px"> Visite o site de Monitoramento dos Painéis ↓ <br> <code><a href='http://127.0.0.1:8000' target='_blank'>http://127.0.0.1:8000</a></code></p>
         </div>
 
       </div>
-      <footer class="container-fluid text-light text-center  mb-0 align-items-bottom">
+      <footer class="container-fluid text-light text-center  mb-0 align-items-bottom fixed-bottom">
         <div class="container navbar-dark  mt-0 mb-0">
             <div class="row">
                 <div class="col pt-2">
@@ -54,7 +57,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col pt-0">
+                <div class="d-flex justify-content-right">
                     <a class="text-right" href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank" style="color: white;text-decoration: none;" title="Desenvolvido em Django">
                         <p class="text-right">Powered by Flask</p>
                     </a>
