@@ -17,7 +17,7 @@
     </h6>
     <table class="table bg-light table-hover rounded table-borderless align-self-center ">
       
-      <thead class="thead bg-dark text-light">
+      <thead id='paineis'class="thead bg-dark text-light">
         <tr>
           <th scope="col">Status</th>
           <th scope="col">Projeto</th>
@@ -54,5 +54,9 @@
     </table>
   </div>
 </div>
-
+<script>
+  $(document).ready(function () {
+    $('#paineis').DataTable();
+});
+</script>
   {% endblock %}
