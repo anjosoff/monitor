@@ -6,15 +6,9 @@ import consulta,ler_planilha
 
 app = Flask(__name__)
 
-
-
 @app.route('/')
 def home():
     return render_template('home.html')
-
-
-
-
 
 @app.errorhandler(404)
 def error_404(error):
@@ -48,16 +42,16 @@ def paineis():
             print(e2)    
             result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'status':False,'reason':e2})
     return make_response(result)
-@app.route('/v1/paineis', methods=['GET'])
-def get_paineis():
-    gc=pygsheets.authorize(service_file='./env/key.json')
-    CODE = '149FnZjzn4lNqpvSX5PvxBa2Wk-f3SHDFDoZ_CCVgp6M'
-    sh=gc.open_by_key(CODE)  
-    wks = sh[0]
-    data=wks.get_all_records()
-    return make_response( 
-            jsonify(data)
-         ) 
+# @app.route('/v1/paineis', methods=['GET'])
+# def get_paineis():
+#     gc=pygsheets.authorize(service_file='./env/key.json')
+#     CODE = '149FnZjzn4lNqpvSX5PvxBa2Wk-f3SHDFDoZ_CCVgp6M'
+#     sh=gc.open_by_key(CODE)  
+#     wks = sh[0]
+#     data=wks.get_all_records()
+#     return make_response( 
+#             jsonify(data)
+#          ) 
    
 if __name__ == '__main__':
     app.run()
