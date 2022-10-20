@@ -1,0 +1,4 @@
+# Ignorar chaves de autenticação da planilha
+env/key.json
+
+#
