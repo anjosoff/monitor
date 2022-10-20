@@ -1,7 +1,5 @@
-from flask import Flask, make_response, jsonify,request,render_template
-import pygsheets
-import pandas as pd
-from flask_swagger_ui import get_swaggerui_blueprint
+from flask import Flask, make_response,render_template
+
 import consulta,ler_planilha
 
 app = Flask(__name__)
@@ -20,7 +18,6 @@ def paineis():
     result=[]
     for linha in dados[1:]:
         try:
-            
             host = linha['host']         
             porta= linha['porta']
             banco= linha['database']
@@ -42,17 +39,6 @@ def paineis():
             print(e2)    
             result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'status':False,'reason':e2})
     return make_response(result)
-# @app.route('/v1/paineis', methods=['GET'])
-# def get_paineis():
-#     gc=pygsheets.authorize(service_file='./env/key.json')
-#     CODE = '149FnZjzn4lNqpvSX5PvxBa2Wk-f3SHDFDoZ_CCVgp6M'
-#     sh=gc.open_by_key(CODE)  
-#     wks = sh[0]
-#     data=wks.get_all_records()
-#     return make_response( 
-#             jsonify(data)
-#          ) 
-   
 if __name__ == '__main__':
     app.run()
 
