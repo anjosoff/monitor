@@ -1,0 +1,60 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Barlow:300,700,900" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link href="{{url_for('static',filename='css/fontes.css')}} " rel="stylesheet">
+<link href="{{url_for('static',filename='css/cores.css')}} " rel="stylesheet">
+
+<link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='img/favicon.png')}}">
+    <title>API  Painéis - Residência de TI</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark text-light">
+    <a class="navbar-brand text-light " href="https://residencia.tre-rn.jus.br/">
+      <img style="width:30px;margin-left:10px; padding-right:2px;" src="{{url_for('static',filename='img/iconLogo.png')}}">
+      API Painéis
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="http://127.0.0.1:8000/" target='_blank'>Monitoramento</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="https://residencia.tre-rn.jus.br/" target='_blank'>Residência em TI <i class="fas fa-external-link-alt fa-xs"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light " href="https://www.tre-rn.jus.br/" target='_blank'>TRE-RN <i class="fas fa-external-link-alt fa-xs"></i></a>
+        </li>
+      </ul>
+  </nav>
+    <div class='container '>    
+        {% block conteudo %}{% endblock conteudo %}
+    </div>
+    <footer class="container-fluid text-light text-center  mb-0 align-items-bottom fixed-bottom">
+        <div class="container navbar-dark  mt-0 mb-0">
+            <div class="row">
+                <div class="col pt-2">
+                    <a href="https://www.tre-rn.jus.br/" target="_blank">
+                        <img src="https://www.tre-rn.jus.br/++theme++justica_eleitoral/imagens/logos/tre-rn-inverse.png" style="width: 115px;height: 45px;"title="Site oficial">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-flex justify-content-right">
+                    <p class="text-right">Powered by <u> <a class="text-right" href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank" style="color: white;text-decoration: none;" title="Desenvolvido em Django">
+                        Flask
+                    </a></u></p>
+                    
+                </div>
+            </div>
+    </footer>
+</body>
+</html>

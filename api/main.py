@@ -12,7 +12,7 @@ def home():
 
 @app.errorhandler(404)
 def error_404(error):
-    return make_response(jsonify({'Status':404,'Error':'Endpoint not found'}),404)
+    return make_response(render_template('404.html'),404)
 
 @app.route('/v1/consultar', methods=['GET'])
 def paineis():
