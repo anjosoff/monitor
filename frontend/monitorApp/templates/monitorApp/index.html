@@ -15,9 +15,9 @@
       </script>
       
     </h6>
-    <table id='paineis' class="table bg-light table-hover rounded table-borderless align-self-center ">
+    <table  id="table" class="table bg-light  table-hover rounded table-borderless align-self-center ">
       
-      <thead class="thead bg-dark text-light">
+      <thead  class="thead bg-dark text-light">
         <tr>
           <th scope="col">Status</th>
           <th scope="col">Projeto</th>
@@ -54,15 +54,15 @@
     </table>
   </div>
 </div>
-<script>
-  $(document).ready(function () {
-    $('#paineis').DataTable({
-      "processing":true,
-      "serverSide":true,
-      "language":{
-        "url":"//cdn.datatables.net/plug-ins/1.11.5/i18n/pt-BR.json"
-      }
-    });
-  });
+
+{% endblock %}
+
+{% block scripts %}
+<script type='text/javascript'>
+  $(document).ready( function () {
+    $('#table').DataTable({searching: false, paging: false, info: false});
+} );
 </script>
-  {% endblock %}
+
+{% endblock scripts %}
+

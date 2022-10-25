@@ -39,6 +39,11 @@ def paineis():
             print(e2)    
             result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'status':False,'reason':e2})
     return make_response(result)
+
+@app.route('/v1/consultar')
+def consultar():
+    return render_template('home.html')
+
 if __name__ == '__main__':
     app.run()
 
