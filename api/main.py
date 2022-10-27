@@ -39,7 +39,7 @@ def paineis():
                 if atualizacao == today:
                     items= str(items)
                     atualizacao=str(atualizacao)
-                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'atualizacao':'Ok','items':items})
+                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'atualizacao':'Atualizado','items':items})
                 else:
                     result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'atualizacao':'Desatualizado','items':items})
             else:
