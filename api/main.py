@@ -56,6 +56,6 @@ def consultar():
     return render_template('home.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='10.16.45.161', port=5000)
 
 
