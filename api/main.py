@@ -1,6 +1,11 @@
 from flask import Flask, make_response,render_template
+
 from datetime import date, datetime
 import consulta_item,consulta_atualizacao,ler_planilha
+
+
+now=datetime.now()
+now=format(now,'%d/%m/%Y %H:%M:%S')
 
 app = Flask(__name__)
 
@@ -13,7 +18,9 @@ def error_404(error):
     return make_response(render_template('404.html'),404)
 
 @app.route('/v1/consultar', methods=['GET'])
+
 def paineis():
+    print(f'[{now}] LOG [API]: REQUISIÇÃO EM ANDAMENTO')
     dados=ler_planilha.lendoPlanilha()
     result=[]
     for linha in dados[1:]:
@@ -47,7 +54,7 @@ def paineis():
             
         except Exception as e2:
             e2=str(e2)     
-            print('LOG [API - ERRO]: ',e2)    
+            print(f'[{now}] LOG [API - ERRO]: ',e2)    
             result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'items':items,'reason':'Ocorreu um erro'})
     return make_response(result)
 
@@ -57,5 +64,3 @@ def consultar():
 
 if __name__ == '__main__':
     app.run(host='10.16.45.161', port=5000)
-
-
