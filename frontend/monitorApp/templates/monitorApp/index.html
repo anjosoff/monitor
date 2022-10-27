@@ -19,34 +19,44 @@
       
       <thead  class="thead bg-dark text-light">
         <tr>
-          <th scope="col">Status</th>
+          
           <th scope="col">Projeto</th>
-          <th scope="col">Painel</th>
           <th scope="col">Sub-projeto</th>
-          <th scope="col">Items</th>
+          <th scope="col">Painel</th>
+          <th scope="col">Fatos</th>
+          <th scope="col">Última Atualização</th>
+          <th scope="col">Status</th>
+          
+          
         </tr>
       </thead>
       <tbody>
-          {% for consulta  in consultar  %}
+        {% for consulta  in consultar  %}
         <tr>
-          {% if  consulta.reason %}
-          <th class="bg-danger" scope="row"><i class="fas fa-ban"></i></th>
+          {% if consulta.reason and not consulta.atualizacao%}
           <td class="bg-danger">{{consulta.projeto}}</td>
-          <td class="bg-danger">{{consulta.painel}}</td>
           <td class="bg-danger">{{consulta.sub_projeto}}</td>
-          <td class="bg-danger">{{consulta.reason}}</td>
-         
+          <td class="bg-danger">{{consulta.painel}}</td>
+          <td class="bg-danger">{{consulta.items}}</td>
+          <td class="bg-danger">Sem dados</td>
+          <td class="bg-danger"> </td>
           {% else %}
+            {% if consulta.atualizacao == "Desatualizado" %}
+              <td class="bg-warning">{{consulta.projeto}}</td>
+              <td class="bg-warning">{{consulta.sub_projeto}}</td>
+              <td class="bg-warning">{{consulta.painel}}</td>
+              <td class="bg-warning">{{consulta.items}}</td>
+              <td class="bg-warning">{{consulta.ultima_atualizacao}}</td>
+              <td class="bg-warning">{{consulta.atualizacao}}</td>
+            {% else %}
+              <td >{{consulta.projeto}}</td>
+              <td >{{consulta.sub_projeto}}</td>
+              <td >{{consulta.painel}}</td>
+              <td >{{consulta.items}}</td>
+              <td >{{consulta.ultima_atualizacao}}</td>
+              <td >{{consulta.atualizacao}}</td>
+           {% endif %}
           
-          {% if consulta.status %}
-          <th scope="row"><i class="fas fa-cog fa-pulse"></i></th>
-          {%else%}
-          <th scope="row"><i class="fas fa-ban"></i></th>
-          {% endif %}
-          <td>{{consulta.projeto}}</td>
-          <td>{{consulta.painel}}</td>
-          <td>{{consulta.sub_projeto}}</td>
-          <td>{{consulta.items}}</td>
           {% endif %}
         </tr>
       {% endfor %}
@@ -60,7 +70,12 @@
 {% block scripts %}
 <script type='text/javascript'>
   $(document).ready( function () {
-    $('#table').DataTable({searching: false, paging: false, info: false});
+    $('#table').DataTable({
+      searching: false, 
+      paging: false, 
+      info: false,
+      order:[[5,'asc']]
+    });
 } );
 </script>
 

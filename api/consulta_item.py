@@ -1,5 +1,5 @@
 import psycopg2
-def consultar(host,database,port,user,pw, schema, table):
+def consultar_items(host,database,port,user,pw, schema, table):
     conn = psycopg2.connect(
         host=host,
         port=port,
