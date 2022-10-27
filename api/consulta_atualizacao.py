@@ -1,5 +1,5 @@
 import psycopg2
-def consultar_atualizacao(host,database,port,user,pw, schema,row_atualizacao,tabela_atualizacao):
+def consultar_atualizacao(host,database,port,user,pw, schema,row_atualizacao,tabela_atualizacao,painel):
     conn = psycopg2.connect(
         host=host,
         port=port,
@@ -14,4 +14,5 @@ def consultar_atualizacao(host,database,port,user,pw, schema,row_atualizacao,tab
     resultado = cs.fetchone()[0]
     
     conn.close()
+    # print('LOG [ATUALIZACAO]: o resultado de ',painel,' é: ',resultado)
     return resultado

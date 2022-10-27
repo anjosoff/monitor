@@ -1,5 +1,5 @@
 import psycopg2
-def consultar_items(host,database,port,user,pw, schema, table):
+def consultar_items(host,database,port,user,pw, schema, table,painel):
     conn = psycopg2.connect(
         host=host,
         port=port,
@@ -14,4 +14,5 @@ def consultar_items(host,database,port,user,pw, schema, table):
     resultado = cs.fetchone()[0]
 
     conn.close()
+    # print('LOG [FATO]: o resultado de ',painel,' é: ',resultado)
     return resultado

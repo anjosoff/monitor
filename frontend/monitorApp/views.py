@@ -7,13 +7,13 @@ from datetime import datetime
 
 def home(request):
     data=datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-    print(f'[{data}] LOG: Consultando a API Painéis')
+    print(f'[{data}] LOG [FRONTEND]: Consultando a API Painéis')
     r=''
     try:
         r = requests.get('http://127.0.0.1:5000/v1/consultar')  
-        print(f'[{data}] LOG: Sincronização bem sucedida, dados atualizados')
+        print(f'[{data}] LOG [FRONTEND]: Sincronização bem sucedida, dados atualizados')
     except Exception as e2:
-        print(f'[{data}] LOG: Houve um erro na conexão com a API \n erro:{e2}')
+        print(f'[{data}] LOG [FRONTEND]: Houve um erro na conexão com a API \n erro:{e2}')
     if r:
         consulta = r.json()
     else:

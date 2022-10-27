@@ -30,8 +30,8 @@ def paineis():
             subprojeto = linha['sub_projeto']
             row_atualizacao=linha['row_atualizacao']
             tabela_atualizacao=linha['tabela_atualizacao']
-            items = consulta_item.consultar_items(host,banco,porta,usuario,senha,esquema,tabela)
-            atualizacao = consulta_atualizacao.consultar_atualizacao(host,banco,porta,usuario,senha,esquema,row_atualizacao,tabela_atualizacao)
+            items = consulta_item.consultar_items(host,banco,porta,usuario,senha,esquema,tabela,painel)
+            atualizacao = consulta_atualizacao.consultar_atualizacao(host,banco,porta,usuario,senha,esquema,row_atualizacao,tabela_atualizacao,painel)
             atualizacao=format(atualizacao,'%d/%m/%Y')
             today=date.today()
             today=format(today,'%d/%m/%Y')
@@ -39,7 +39,7 @@ def paineis():
                 if atualizacao == today:
                     items= str(items)
                     atualizacao=str(atualizacao)
-                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'atualizacao':'Atualizado','items':items})
+                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'atualizacao':'Ok','items':items})
                 else:
                     result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'atualizacao':'Desatualizado','items':items})
             else:
@@ -47,7 +47,7 @@ def paineis():
             
         except Exception as e2:
             e2=str(e2)     
-            print(e2)    
+            print('LOG [ERRO]: ',e2)    
             result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'items':items,'reason':'Ocorreu um erro'})
     return make_response(result)
 
