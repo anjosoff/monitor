@@ -56,6 +56,7 @@ def paineis():
             e2=str(e2)     
             print(f'[{now}] LOG [API - ERRO]: ',e2)    
             result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'items':items,'reason':'Ocorreu um erro'})
+    print(f'[{now}] LOG [API]: REQUISIÇÃO CONCLUÍDA')
     return make_response(result)
 
 @app.route('/v1/consultar')

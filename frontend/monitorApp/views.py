@@ -9,11 +9,12 @@ def home(request):
     data=datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     print(f'[{data}] LOG [FRONTEND]: Consultando a API Painéis')
     r=''
+    
     try:
         r = requests.get('http://10.16.45.161:5000/v1/consultar')  
         print(f'[{data}] LOG [FRONTEND]: Sincronização bem sucedida, dados atualizados')
     except Exception as e2:
-        print(f'[{data}] LOG [FRONTEND]: Houve um erro na conexão com a API \n erro:{e2}')
+        print(f'[{data}] LOG [FRONTEND]: Houve um erro na conexão com a API \n erro:{e2} \n')
     if r:
         consulta = r.json()
     else:
