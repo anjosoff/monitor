@@ -47,7 +47,7 @@ def paineis():
             
         except Exception as e2:
             e2=str(e2)     
-            print('LOG [ERRO]: ',e2)    
+            print('LOG [API - ERRO]: ',e2)    
             result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'items':items,'reason':'Ocorreu um erro'})
     return make_response(result)
 
