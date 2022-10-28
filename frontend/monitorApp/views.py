@@ -22,3 +22,6 @@ def home(request):
     else:
         consulta={'painel':'Houve um erro na comunicação com a API Paineis'}
     return render(request, 'monitorApp/index.html',{'consultar':consulta})
+
+def erro_404(request,exception):
+    return render(request,'monitorApp/404.html')

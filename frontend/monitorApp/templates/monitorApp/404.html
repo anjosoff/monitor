@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+ {% block 'content' %}
+ 
+
+
+ <div class="bg-danger rounded text-light pl-3 centered text-justify" style="margin-left:400px;width:550px;height: 350px; padding-top:35px; margin-top:150px">
+     <img style='padding-left:200px;padding-bottom:10px;'src="{% static 'img/iconLogo.png'%}">
+     <h1 class="d-flex justify-content-center pb-0 pt-0">Página não encontrada!</h1>    
+     <p style="padding-left:40px"> Para fazer consulta na API use o endpoint ↓ <br> <code> <u><a class='text-light'href='http://10.16.45.161:5000/v1/consultar' target='_blank'>http://10.16.45.161:5000/v1/consultar</a></u></code></p>
+     <p style="padding-left:40px"> Visite o site de Monitoramento dos Painéis ↓ <br> <code><u><a class='text-light'href='http://10.16.45.161:8000/' target='_blank'>http://10.16.45.161:8000/</a></u></code></p>
+   </div>
+ 
+ {% endblock 'content' %}
+ 
+ 
+{% block 'footer' %}
+
+<footer class="container-fluid text-light text-center pt-2  mt-2 mb-0 d-flex justify-content-center ">
+    <div style='padding-top:250px'class="container navbar-dark  mt-0 mb-0">
+        <div class="row">
+            <div class="col mt-3 ">
+                <a href="https://www.tre-rn.jus.br/" target="_blank">
+                    <img src="https://www.tre-rn.jus.br/++theme++justica_eleitoral/imagens/logos/tre-rn-inverse.png" style="width: 115px;height: 45px;"title="Site oficial">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-0  d-flex justify-content-right">
+               
+                    <p class="text-right">Powered by  <u><a class="text-right" href="https://www.djangoproject.com/" target="_blank" style="color: white;text-decoration: none;" title="Desenvolvido em Django">Django</a></u></p>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock 'footer' %}
+
+
+
+
+
+
+
+
