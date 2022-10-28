@@ -33,7 +33,7 @@
       <tbody class='text-justify'>
         {% for consulta  in consultar  %}
         <tr>
-          {% if consulta.reason and not consulta.atualizacao%}
+          {% if consulta.reason and not consulta.status%}
           <td class="bg-danger">{{consulta.projeto}}</td>
           <td class="bg-danger">{{consulta.sub_projeto}}</td>
           <td class="bg-danger">{{consulta.painel}}</td>
@@ -41,22 +41,21 @@
           <td class="bg-danger text-center">Sem dados</td>
           <td class="bg-danger text-center"></td>
           {% else %}
-            {% if consulta.atualizacao == "Desatualizado" %}
+            {% if consulta.status == "Desatualizado" %}
               <td class="bg-warning">{{consulta.projeto}}</td>
               <td class="bg-warning">{{consulta.sub_projeto}}</td>
               <td class="bg-warning">{{consulta.painel}}</td>
               <td class="bg-warning">{{consulta.items}}</td>
               <td class="bg-warning text-center">{{consulta.ultima_atualizacao}}</td>
-              <td class="bg-warning text-center">{{consulta.atualizacao}}</td>
+              <td class="bg-warning text-center">{{consulta.status}}</td>
             {% else %}
               <td >{{consulta.projeto}}</td>
               <td >{{consulta.sub_projeto}}</td>
               <td >{{consulta.painel}}</td>
               <td >{{consulta.items}}</td>
               <td class='text-center'>{{consulta.ultima_atualizacao}}</td>
-              <td class='text-center'>{{consulta.atualizacao}}</td>
+              <td class='text-center'>{{consulta.status}}</td>
            {% endif %}
-          
           {% endif %}
         </tr>
       {% endfor %}
@@ -93,9 +92,7 @@
       </div>
       <div class="row">
           <div class="col mt-0  d-flex justify-content-right">
-             
-                  <p class="text-right">Powered by  <u><a class="text-right" href="https://www.djangoproject.com/" target="_blank" style="color: white;text-decoration: none;" title="Desenvolvido em Django">Django</a></u></p>
-              
+                  <p class="text-right">Made with <u><a class="text-right" href="https://www.djangoproject.com/" target="_blank" style="color: white;text-decoration: none;">Django</a></u></p>              
           </div>
       </div>
   </div>

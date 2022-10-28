@@ -1,5 +1,6 @@
 from flask import Flask, make_response,render_template
 
+
 from datetime import date, datetime
 import consulta_item,consulta_atualizacao,ler_planilha
 
@@ -45,12 +46,12 @@ def paineis():
                 if atualizacao == today:
                     items= str(items)
                     atualizacao=str(atualizacao)
-                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'status':'Atualizado','items':items})
+                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'status':'Ok','items':items})
                 else:
                     result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'status':'Desatualizado','items':items})
             else:
                 if atualizacao == today:
-                    result.append({'painel':painel,'items':'Não há items','ultima_atualizacao':atualizacao,'status':'Atualizado'})
+                    result.append({'painel':painel,'items':'Não há items','ultima_atualizacao':atualizacao,'status':'Ok'})
                 else:
                     result.append({'painel':painel,'items':'Não há items','ultima_atualizacao':atualizacao,'status':'Desatualizado'})
             
