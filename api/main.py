@@ -18,7 +18,6 @@ def error_404(error):
     return make_response(render_template('404.html'),404)
 
 @app.route('/v1/consultar', methods=['GET'])
-
 def paineis():
     print(f'[{now}] LOG [API]: REQUISIÇÃO EM ANDAMENTO')
     dados=ler_planilha.lendoPlanilha()
