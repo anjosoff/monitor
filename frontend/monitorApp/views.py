@@ -6,7 +6,9 @@ from datetime import datetime
 
 
 def home(request):
-    data=datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    
+    data=datetime.now()
+    data=format(data,'%d/%m/%Y %H:%M:%S')
     print(f'[{data}] LOG [FRONTEND]: Consultando a API Painéis')
     r=''
     
