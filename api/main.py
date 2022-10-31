@@ -46,14 +46,14 @@ def paineis():
                 if atualizacao == today:
                     items= str(items)
                     atualizacao=str(atualizacao)
-                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'status':'Ok','items':items})
+                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'situacao':'Ok','items':items})
                 else:
-                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'status':'Desatualizado','items':items})
+                    result.append({'painel':painel,'projeto':projeto,'sub_projeto':subprojeto,'ultima_atualizacao':atualizacao,'situacao':'Desatualizado','items':items})
             else:
                 if atualizacao == today:
-                    result.append({'painel':painel,'items':'Não há items','ultima_atualizacao':atualizacao,'status':'Ok'})
+                    result.append({'painel':painel,'items':'Não há items','ultima_atualizacao':atualizacao,'situacao':'Ok'})
                 else:
-                    result.append({'painel':painel,'items':'Não há items','ultima_atualizacao':atualizacao,'status':'Desatualizado'})
+                    result.append({'painel':painel,'items':'Não há items','ultima_atualizacao':atualizacao,'situacao':'Desatualizado'})
             
         except Exception as e2:
             e2=str(e2)     

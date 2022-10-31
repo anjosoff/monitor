@@ -6,12 +6,10 @@ from datetime import datetime
 
 
 def home(request):
-    
     data=datetime.now()
     data=format(data,'%d/%m/%Y %H:%M:%S')
     print(f'[{data}] LOG [FRONTEND]: Consultando a API Painéis')
     r=''
-    
     try:
         r = requests.get('http://10.16.45.161:5000/v1/consultar')  
         print(f'[{data}] LOG [FRONTEND]: Sincronização bem sucedida, dados atualizados')

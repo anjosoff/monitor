@@ -25,7 +25,7 @@
           <th scope="col">Painel</th>
           <th scope="col">Fatos</th>
           <th scope="col">Última Atualização</th>
-          <th scope="col">Status</th>
+          <th scope="col">Situação</th>
           
           
         </tr>
@@ -33,7 +33,7 @@
       <tbody class='text-justify'>
         {% for consulta  in consultar  %}
         <tr>
-          {% if consulta.reason and not consulta.status%}
+          {% if consulta.reason and not consulta.situacao%}
           <td class="bg-danger">{{consulta.projeto}}</td>
           <td class="bg-danger">{{consulta.sub_projeto}}</td>
           <td class="bg-danger">{{consulta.painel}}</td>
@@ -41,20 +41,20 @@
           <td class="bg-danger text-center">Sem dados</td>
           <td class="bg-danger text-center"></td>
           {% else %}
-            {% if consulta.status == "Desatualizado" %}
+            {% if consulta.situacao == "Desatualizado" %}
               <td class="bg-warning">{{consulta.projeto}}</td>
               <td class="bg-warning">{{consulta.sub_projeto}}</td>
               <td class="bg-warning">{{consulta.painel}}</td>
               <td class="bg-warning">{{consulta.items}}</td>
               <td class="bg-warning text-center">{{consulta.ultima_atualizacao}}</td>
-              <td class="bg-warning text-center">{{consulta.status}}</td>
+              <td class="bg-warning text-center">{{consulta.situacao}}</td>
             {% else %}
               <td >{{consulta.projeto}}</td>
               <td >{{consulta.sub_projeto}}</td>
               <td >{{consulta.painel}}</td>
               <td >{{consulta.items}}</td>
               <td class='text-center'>{{consulta.ultima_atualizacao}}</td>
-              <td class='text-center'>{{consulta.status}}</td>
+              <td class='text-center'>{{consulta.situacao}}</td>
            {% endif %}
           {% endif %}
         </tr>
