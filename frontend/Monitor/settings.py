@@ -28,7 +28,7 @@ DEBUG = False
 ADMIN_ENABLED = False
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    '1498-131-0-227-50.sa.ngrok.io',
+    'localhost',
     '10.16.45.161'
 ]
 
