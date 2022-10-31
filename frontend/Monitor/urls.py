@@ -15,11 +15,11 @@ Including another URLconf
 """
 from cgitb import handler
 from django.urls import path, include
-
 from monitorApp.views import erro_404
 
 urlpatterns = [
     path('', include('monitorApp.urls')),
+   
 ]
 
 

@@ -53,9 +53,7 @@ body {
     height: 80vh;
     max-height: 600px;
 }
-#table_wrapper{
-    color:white ! important;
-}
+
 .bg-3 {
     background-image: url("../img/postit.svg");
     /* background: #4790F7; */
