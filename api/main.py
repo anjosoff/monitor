@@ -1,8 +1,7 @@
 from flask import Flask, make_response,render_template
 
-
 from datetime import date, datetime
-import consulta_item,consulta_atualizacao,ler_planilha
+import consulta_item, consulta_atualizacao, ler_planilha
 
 
 now=datetime.now()
