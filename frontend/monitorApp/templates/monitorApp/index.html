@@ -33,7 +33,7 @@
       <tbody class='text-justify'>
         {% for consulta  in consultar  %}
         <tr>
-          {% if consulta.reason and not consulta.situacao%}
+          {% if consulta.situacao == "Error"%}
           <td class="bg-danger">{{consulta.projeto}}</td>
           <td class="bg-danger">{{consulta.sub_projeto}}</td>
           <td class="bg-danger">{{consulta.painel}}</td>
